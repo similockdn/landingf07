@@ -1,339 +1,780 @@
+# index.html
+
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Similock - Khoá Thông Minh Hiện Đại Tại Đà Nẵng. Bảo vệ ngôi nhà của bạn với công nghệ khoá thông minh tiên tiến.">
-    <meta name="keywords" content="khoá thông minh, smart lock, Đà Nẵng, khoá vân tay, khoá căn hộ, khoá cửa nhôm, bảo vệ nhà">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Khoá Thông Minh Similock Đà Nẵng | Miễn Phí Lắp Đặt & Bảo Hành 24 Tháng</title>
+
+    <meta name="description"
+        content="Khoá thông minh Similock Đà Nẵng chính hãng. Face ID, vân tay, WiFi, app Tuya, chống nước, phù hợp khí hậu miền Trung. Miễn phí lắp đặt và bảo hành 24 tháng tận nhà. Hotline 0902950816." />
+
+    <meta name="keywords"
+        content="khoá thông minh Đà Nẵng, khoá vân tay, similock, khóa cửa nhôm xingfa, khóa cửa gỗ, khóa cửa sắt, khóa wifi" />
+
+    <meta name="robots" content="index, follow" />
+
     <meta name="google-site-verification" content="8jAf_ly21_aCIvHWtV6bo8PIZd7fQTP7Jv1YmyxTWTw" />
-    <title>Similock - Khoá Thông Minh Đà Nẵng</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Khoá Thông Minh Similock Đà Nẵng" />
+    <meta property="og:description"
+        content="Miễn phí lắp đặt và bảo hành 24 tháng tận nhà. Chính hãng Similock." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://yourdomain.com/cover.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Schema SEO -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"LocalBusiness",
+      "name":"Khoá thông minh Similock Đà Nẵng",
+      "telephone":"0902950816",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"223 Trường Chinh",
+        "addressLocality":"Đà Nẵng",
+        "addressCountry":"VN"
+      },
+      "url":"https://yourdomain.com"
+    }
+    </script>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+            line-height:1.6;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        img{
+            max-width:100%;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        /* HEADER */
+
+        header{
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:999;
+            background:rgba(15,23,42,0.95);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 0;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#38bdf8;
+        }
+
+        .menu{
+            display:flex;
+            gap:25px;
+        }
+
+        .menu a{
+            color:white;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        .menu a:hover{
+            color:#38bdf8;
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            text-align:center;
+            background:linear-gradient(to bottom right,#0f172a,#1e293b);
+            padding-top:100px;
+        }
+
+        .hero h1{
+            font-size:60px;
+            margin-bottom:20px;
+            line-height:1.2;
+        }
+
+        .hero p{
+            color:#cbd5e1;
+            font-size:20px;
+            margin-bottom:35px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:16px 35px;
+            border-radius:14px;
+            font-weight:bold;
+            transition:0.3s;
+            margin:10px;
+        }
+
+        .btn-primary{
+            background:#38bdf8;
+            color:black;
+        }
+
+        .btn-primary:hover{
+            transform:translateY(-3px);
+        }
+
+        .btn-outline{
+            border:2px solid #38bdf8;
+            color:#38bdf8;
+        }
+
+        .btn-outline:hover{
+            background:#38bdf8;
+            color:black;
+        }
+
+        /* SECTION */
+
+        section{
+            padding:90px 0;
+        }
+
+        .section-title{
+            text-align:center;
+            font-size:42px;
+            margin-bottom:60px;
+        }
+
+        /* GRID */
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+        }
+
+        /* CARD */
+
+        .card{
+            background:#1e293b;
+            padding:35px;
+            border-radius:24px;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+        }
+
+        .card i{
+            font-size:45px;
+            color:#38bdf8;
+            margin-bottom:20px;
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            font-size:24px;
+        }
+
+        .card p{
+            color:#cbd5e1;
+        }
+
+        /* PRODUCT */
+
+        .product{
+            background:#111827;
+            padding:40px 30px;
+            border-radius:25px;
+            text-align:center;
+            position:relative;
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .badge{
+            position:absolute;
+            top:15px;
+            right:15px;
+            background:#38bdf8;
+            color:black;
+            padding:8px 14px;
+            border-radius:999px;
+            font-size:13px;
+            font-weight:bold;
+        }
+
+        .product h3{
+            font-size:30px;
+            margin-bottom:15px;
+        }
+
+        .price{
+            font-size:34px;
+            color:#38bdf8;
+            margin-bottom:25px;
+            font-weight:bold;
+        }
+
+        .product ul{
+            list-style:none;
+            margin-bottom:30px;
+        }
+
+        .product ul li{
+            margin:12px 0;
+            color:#cbd5e1;
+        }
+
+        /* CONTACT */
+
+        .contact-box{
+            background:#1e293b;
+            padding:50px;
+            border-radius:30px;
+            text-align:center;
+        }
+
+        .contact-box h2{
+            font-size:42px;
+            margin-bottom:20px;
+        }
+
+        .hotline{
+            font-size:46px;
+            color:#38bdf8;
+            font-weight:bold;
+            margin:25px 0;
+        }
+
+        .contact-box p{
+            color:#cbd5e1;
+            margin:10px 0;
+        }
+
+        /* TESTIMONIAL */
+
+        .stars{
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#020617;
+            padding:35px 0;
+            text-align:center;
+            border-top:1px solid rgba(255,255,255,0.08);
+        }
+
+        footer p{
+            color:#94a3b8;
+        }
+
+        /* FLOATING */
+
+        .floating{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+            z-index:999;
+        }
+
+        .floating a{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:#38bdf8;
+            color:black;
+            font-size:24px;
+            font-weight:bold;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:40px;
+            }
+
+            .hero p{
+                font-size:18px;
+            }
+
+            .menu{
+                display:none;
+            }
+
+            .section-title{
+                font-size:32px;
+            }
+
+            .contact-box{
+                padding:35px 25px;
+            }
+
+            .hotline{
+                font-size:34px;
+            }
+
+        }
+
+    </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <!-- HEADER -->
+
+    <header>
         <div class="container">
-            <div class="nav-wrapper">
+
+            <nav>
+
                 <div class="logo">
-                    <i class="fas fa-lock"></i>
-                    <span>Similock</span>
+                    <i class="fa-solid fa-lock"></i> SIMILOCK
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#features">Tính Năng</a></li>
-                    <li><a href="#products">Sản Phẩm</a></li>
-                    <li><a href="#benefits">Lợi Ích</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
+                <div class="menu">
+                    <a href="#features">Tính năng</a>
+                    <a href="#products">Sản phẩm</a>
+                    <a href="#reviews">Đánh giá</a>
+                    <a href="#contact">Liên hệ</a>
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+
     <section class="hero">
-        <div class="hero-content">
-            <h1>Khoá Thông Minh Similock</h1>
-            <p>Bảo vệ ngôi nhà của bạn với công nghệ hiện đại</p>
-            <p class="location"><i class="fas fa-map-marker-alt"></i> Đà Nẵng</p>
-            <div class="cta-buttons">
-                <button class="btn btn-primary">Khám Phá Ngay</button>
-                <button class="btn btn-secondary">Liên Hệ Tư Vấn</button>
-            </div>
+
+        <div class="container">
+
+            <h1>
+                Khoá Thông Minh Similock Đà Nẵng 🔥
+            </h1>
+
+            <p>
+                Chính hãng Similock • Miễn phí lắp đặt và bảo hành 24 tháng tận nhà
+            </p>
+
+            <a href="tel:0902950816" class="btn btn-primary">
+                📞 Gọi Ngay 0902950816
+            </a>
+
+            <a href="#products" class="btn btn-outline">
+                Xem Sản Phẩm
+            </a>
+
         </div>
-        <div class="hero-image">
-            <div class="lock-icon">
-                <i class="fas fa-lock"></i>
-            </div>
-        </div>
+
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- FEATURES -->
+
+    <section id="features">
+
         <div class="container">
-            <h2>Tính Năng Chính</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-smartphone"></i>
-                    </div>
-                    <h3>Điều Khiển Từ Xa</h3>
-                    <p>Mở khóa từ bất kỳ nơi nào thông qua ứng dụng di động</p>
+
+            <h2 class="section-title">
+                Tính Năng Nổi Bật ✨
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+                    <i class="fa-solid fa-fingerprint"></i>
+                    <h3>Vân Tay</h3>
+                    <p>Mở khoá nhanh chóng và bảo mật cao.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-fingerprint"></i>
-                    </div>
-                    <h3>Nhận Diện Vân Tay</h3>
-                    <p>Công nghệ nhận diện vân tay an toàn và nhanh chóng</p>
+
+                <div class="card">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h3>Face ID</h3>
+                    <p>Nhận diện khuôn mặt cực nhanh và hiện đại.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Camera Giám Sát</h3>
-                    <p>Giám sát cửa ra vào 24/7 với camera HD tích hợp</p>
+
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3>App Tuya</h3>
+                    <p>Điều khiển từ xa bằng điện thoại thông minh.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock-open"></i>
-                    </div>
-                    <h3>Mở Khóa Đa Phương Thức</h3>
-                    <p>Vân tay, mã PIN, chìa khóa, hoặc điện thoại</p>
+
+                <div class="card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Chống Nước</h3>
+                    <p>Phù hợp tài chính và khí hậu miền Trung.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>Thông Báo Thời Thực</h3>
-                    <p>Nhận thông báo ngay khi có người mở khóa</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-battery-full"></i>
-                    </div>
-                    <h3>Pin Lâu Dài</h3>
-                    <p>Thời lượng pin lên đến 12 tháng</p>
-                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- PRODUCTS -->
+
+    <section id="products">
+
         <div class="container">
-            <h2>Dòng Sản Phẩm</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-lock"></i>
+
+            <h2 class="section-title">
+                Dòng Khoá Bán Chạy 🚀
+            </h2>
+
+            <div class="grid">
+
+                <div class="product">
+
+                    <div class="badge">HOT</div>
+
+                    <h3>SIMILOCK F07</h3>
+
+                    <div class="price">
+                        1.850.000₫
                     </div>
-                    <h3>Similock Pro</h3>
-                    <p class="price">4.990.000₫</p>
-                    <ul class="product-features">
-                        <li>✓ Nhận diện vân tay</li>
-                        <li>✓ Điều khiển từ xa</li>
-                        <li>✓ Thông báo SMS</li>
-                        <li>✓ Bảo hành 2 năm</li>
+
+                    <ul>
+                        <li>✅ Chuyên cửa composite</li>
+                        <li>✅ Chuyên cửa gỗ & căn hộ</li>
+                        <li>✅ Vân tay • Thẻ từ • Mật khẩu</li>
+                        <li>✅ Miễn phí lắp đặt</li>
                     </ul>
-                    <button class="btn btn-outline">Chi Tiết</button>
+
+                    <a href="tel:0902950816" class="btn btn-primary">
+                        Tư Vấn Ngay
+                    </a>
+
                 </div>
-                <div class="product-card featured">
-                    <div class="badge">Bán Chạy</div>
-                    <div class="product-image">
-                        <i class="fas fa-lock"></i>
+
+                <div class="product">
+
+                    <div class="badge">BEST SELLER</div>
+
+                    <h3>SIMILOCK S01</h3>
+
+                    <div class="price">
+                        Face ID 🔥
                     </div>
-                    <h3>Similock Premium</h3>
-                    <p class="price">6.990.000₫</p>
-                    <ul class="product-features">
-                        <li>✓ Camera HD 1080P</li>
-                        <li>✓ Tất cả tính năng Pro</li>
-                        <li>✓ Giám sát video 24/7</li>
-                        <li>✓ Bảo hành 3 năm</li>
+
+                    <ul>
+                        <li>✅ Chuyên cửa nhôm Xingfa</li>
+                        <li>✅ Không khoét đục nhiều</li>
+                        <li>✅ App Tuya thông minh</li>
+                        <li>✅ Chính hãng Similock</li>
                     </ul>
-                    <button class="btn btn-primary">Đặt Mua</button>
+
+                    <a href="tel:0902950816" class="btn btn-primary">
+                        Tư Vấn Ngay
+                    </a>
+
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-lock"></i>
+
+                <div class="product">
+
+                    <div class="badge">CHỐNG NƯỚC</div>
+
+                    <h3>SIMILOCK 569 WiFi</h3>
+
+                    <div class="price">
+                        Cổng Cửa Sắt 💧
                     </div>
-                    <h3>Similock Basic</h3>
-                    <p class="price">2.990.000₫</p>
-                    <ul class="product-features">
-                        <li>✓ Mở khóa bằng PIN</li>
-                        <li>✓ Chìa khóa cơ</li>
-                        <li>✓ Thông báo cơ bản</li>
-                        <li>✓ Bảo hành 1 năm</li>
+
+                    <ul>
+                        <li>✅ WiFi trực tiếp</li>
+                        <li>✅ Vân tay • Thẻ từ</li>
+                        <li>✅ Chìa cơ 2 mặt</li>
+                        <li>✅ Mở khoá từ xa app Tuya</li>
                     </ul>
-                    <button class="btn btn-outline">Chi Tiết</button>
+
+                    <a href="tel:0902950816" class="btn btn-primary">
+                        Tư Vấn Ngay
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits">
+    <!-- BENEFITS -->
+
+    <section>
+
         <div class="container">
-            <h2>Lợi Ích Của Similock</h2>
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <div class="benefit-number">01</div>
-                    <h3>An Toàn Cao</h3>
-                    <p>Công nghệ mã hóa tiên tiến bảo vệ dữ liệu của bạn</p>
+
+            <h2 class="section-title">
+                Vì Sao Chọn Similock ❓
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+                    <i class="fa-solid fa-house-lock"></i>
+                    <h3>An Toàn</h3>
+                    <p>Bảo mật hiện đại và cực kỳ tiện lợi cho gia đình.</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">02</div>
-                    <h3>Tiết Kiệm Chi Phí</h3>
-                    <p>Không cần thay chìa khóa, không lo mất chìa</p>
+
+                <div class="card">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Lắp Đặt Miễn Phí</h3>
+                    <p>Miễn phí lắp đặt tận nhà tại Đà Nẵng và TP.HCM.</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">03</div>
-                    <h3>Tiện Lợi</h3>
-                    <p>Mở khóa dễ dàng mà không cần bỏ túi điện thoại</p>
+
+                <div class="card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h3>Chính Hãng</h3>
+                    <p>Nói không với hàng trôi nổi và hàng kém chất lượng.</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">04</div>
-                    <h3>Quản Lý Truy Cập</h3>
-                    <p>Tạo quyền truy cập tạm thời cho khách hoặc dịch vụ</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">05</div>
+
+                <div class="card">
+                    <i class="fa-solid fa-headset"></i>
                     <h3>Hỗ Trợ 24/7</h3>
-                    <p>Đội ngũ kỹ thuật sẵn sàng hỗ trợ bất cứ lúc nào</p>
+                    <p>Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ khách hàng.</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">06</div>
-                    <h3>Cập Nhật Miễn Phí</h3>
-                    <p>Nhận các tính năng mới qua cập nhật OTA</p>
-                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- REVIEWS -->
+
+    <section id="reviews">
+
         <div class="container">
-            <h2>Đánh Giá Từ Khách Hàng</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
+
+            <h2 class="section-title">
+                Đánh Giá Khách Hàng ⭐
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        ⭐⭐⭐⭐⭐
                     </div>
-                    <p>"Sản phẩm tuyệt vời! Rất hài lòng với chất lượng và dịch vụ của Similock."</p>
-                    <p class="author">- Nguyễn Văn A</p>
+                    <p>
+                        “Lắp rất đẹp và chuyên nghiệp. Khoá dùng cực mượt.”
+                    </p>
+                    <br>
+                    <strong>— Anh Hùng • Đà Nẵng</strong>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="card">
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        ⭐⭐⭐⭐⭐
                     </div>
-                    <p>"Đội hỗ trợ rất chuyên nghiệp. Lắp đặt nhanh chóng và chuyên sâu."</p>
-                    <p class="author">- Trần Thị B</p>
+                    <p>
+                        “Model 569 chống nước cực ổn cho cổng cửa sắt.”
+                    </p>
+                    <br>
+                    <strong>— Chị Vy • Hội An</strong>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="card">
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        ⭐⭐⭐⭐⭐
                     </div>
-                    <p>"Hiện đại, an toàn và dễ sử dụng. Giá cả hợp lý cho chất lượng."</p>
-                    <p class="author">- Lê Văn C</p>
+                    <p>
+                        “Face ID nhận diện cực nhanh, app dùng rất tiện.”
+                    </p>
+                    <br>
+                    <strong>— Anh Nam • TP.HCM</strong>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- SEO CONTENT -->
+
+    <section>
+
         <div class="container">
-            <h2>Liên Hệ Với Chúng Tôi</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Địa Chỉ</h3>
-                            <p>Đà Nẵng, Việt Nam</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Điện Thoại</h3>
-                            <p><a href="tel:+84383888888">+84 (383) 888-888</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:info@similock.vn">info@similock.vn</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Giờ Làm Việc</h3>
-                            <p>Thứ 2 - Thứ 7: 8:00 - 18:00</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Tên của bạn" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email của bạn" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Số điện thoại">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Tin nhắn của bạn" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Gửi Tin Nhắn</button>
-                </form>
+
+            <div class="card">
+
+                <h2>
+                    Khoá thông minh Similock tại Đà Nẵng
+                </h2>
+
+                <br>
+
+                <p>
+                    Chuyên lắp đặt khoá thông minh Similock tại Đà Nẵng,
+                    Hội An và TP.HCM.
+                    Miễn phí lắp đặt tận nhà và bảo hành 24 tháng.
+                </p>
+
+                <br>
+
+                <p>
+                    Các dòng nổi bật:
+                    S01 Face ID, F07, S6, 569 WiFi chống nước,
+                    phù hợp tài chính và khí hậu miền Trung.
+                </p>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- CONTACT -->
+
+    <section id="contact">
+
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Similock</h3>
-                    <p>Khoá thông minh hàng đầu tại Đà Nẵng</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
+
+            <div class="contact-box">
+
+                <h2>
+                    Liên Hệ Ngay 📞
+                </h2>
+
+                <div class="hotline">
+                    0902950816
                 </div>
-                <div class="footer-section">
-                    <h3>Sản Phẩm</h3>
-                    <ul>
-                        <li><a href="#">Similock Pro</a></li>
-                        <li><a href="#">Similock Premium</a></li>
-                        <li><a href="#">Similock Basic</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Hỗ Trợ</h3>
-                    <ul>
-                        <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
-                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
-                        <li><a href="#">Liên Hệ Hỗ Trợ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Công Ty</h3>
-                    <ul>
-                        <li><a href="#">Về Chúng Tôi</a></li>
-                        <li><a href="#">Chính Sách Bảo Mật</a></li>
-                        <li><a href="#">Điều Khoản Sử Dụng</a></li>
-                    </ul>
-                </div>
+
+                <p>
+                    khoá thông minh Similock Đà Nẵng
+                </p>
+
+                <br>
+
+                <p>
+                    📍 Đà Nẵng: 223 Trường Chinh, Đà Nẵng
+                </p>
+
+                <p>
+                    📍 TP.HCM: 403 Nguyễn Thái Bình, P. Bảy Hiền, TP.HCM
+                </p>
+
+                <br>
+
+                <a href="tel:0902950816" class="btn btn-primary">
+                    📞 Gọi Tư Vấn Ngay
+                </a>
+
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Similock. All rights reserved. | Developed with <i class="fas fa-heart"></i> in Da Nang</p>
-            </div>
+
         </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 khoá thông minh Similock Đà Nẵng | Miễn phí lắp đặt và bảo hành 24 tháng tận nhà
+            </p>
+
+        </div>
+
     </footer>
 
-    <script src="script.js"></script>
+    <!-- FLOATING BUTTON -->
+
+    <div class="floating">
+
+        <a href="tel:0902950816">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <a href="https://zalo.me/0902950816">
+            Z
+        </a>
+
+    </div>
+
 </body>
 </html>
+```
+
+---
+
+# robots.txt
+
+```txt
+User-agent: *
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml
+```
+
+---
+
+# sitemap.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+<loc>https://yourdomain.com/</loc>
+<priority>1.0</priority>
+</url>
+
+</urlset>
+```
